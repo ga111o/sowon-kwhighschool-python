@@ -325,21 +325,23 @@ array의 첫 번째 인덱스인 1이
 
 <br>
 
-> <small>i는 index의 약자로 반복문 등에서 index를 나타낼 때 변수를 주로 i로 설정한다.</small>
+> i는 index의 약자로 반복문 등에서 index를 나타낼 때 변수를 주로 i로 설정한다.
 
 ---
 
 ### for 문
 
-<div style="float:left; width: 40%; margin-right:30px">
+<div style="float:left; width: 50%; margin-right:30px">
 
 ```python
 
 start = 1
 end = 15
+step = 1
 
-for i in range(start, end):
+for i in range(start, end, step):
   print(i)
+
 
 ```
 
@@ -349,8 +351,92 @@ for i in range(start, end):
 
 `range(1, 10)`와 `[1, 2, 3, 4 ... 8, 9]`가 같다고 해석해도 무방.
 
-<br>
+step이 음수라면, 역순 출력
 
 > 일반적으로 for문은 반복 횟수가 정해진 경우에 사용되기에 range() 함수를 사용하는 경우가 대부분이다.
+
+---
+
+### 예제
+
+<div style="float:right; width: 23%; margin-left:30px">
+
+```python
+# for 예제 2번
+
+  *
+ ***
+*****
+ ***
+  *
+
+```
+
+</div>
+
+<div style="float:right; width: 23%; margin-left:30px">
+
+```python
+# for 예제 1번
+
+*
+**
+***
+****
+*****
+
+```
+
+</div>
+
+**별 찍기**
+
+반복문을 이용하여 우측 결과 출력
+
+---
+
+### 예제
+
+<div style="float:right; width: 57%; margin-left:5px">
+
+```python
+# for 예제 2번
+
+# 상단 삼각형 출력
+for i in range(1, 4):
+  print(" " * (3 - i) + "*" * (2 * i - 1))
+
+# 하단 삼각형 출력
+for i in range(2, 0, -1):
+  print(" " * (3 - i) + "*" * (2 * i - 1))
+
+
+
+
+```
+
+</div>
+
+<div style="float:right; width: 30%; margin-left:5px">
+
+```python
+# for 예제 1번
+
+for i in range(1,6):
+    print("*" * i)
+
+
+
+
+
+
+
+
+
+```
+
+</div>
+
+**별 찍기**
 
 ---
