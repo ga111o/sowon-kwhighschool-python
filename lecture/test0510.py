@@ -63,5 +63,15 @@ age = 16
 # for i in range(1,15):
 #   print(i)
 
-for i in "ga1ahad":
-  print(i)
+# for i in "ga1ahad":
+#   print(i)
+
+# for i in range(1, 4):
+#     print(" " * (3 - i) + "*" * (2 * i - 1))
+# for i in range(2, 0, -1):
+#     print(" " * (3 - i) + "*" * (2 * i - 1))
+for i in range(20, 0, -1):
+    print(i)
+
+# for i in range(1,6):
+#     print("*"*i)
