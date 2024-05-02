@@ -226,8 +226,6 @@ else:
 
 ```python
 
-year = int(input("연도를 입력하세요: "))
-
 if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
     print(f"{year}년 윤년 O")
 else:
@@ -241,6 +239,118 @@ else:
 
 연산의 결과가 True이면 코드 블록을 실행하는 것이기에
 
-이렇게 최적화 가능
+이렇게 최적화 가능.
+
+---
+
+### 반복문이란?
+
+특정한 조건을 만족할 때, 동일한 코드 블록을 반복하는 명령어
+
+주로 for, while이 사용됨.
+
+- `for`: 반복 횟수가 정해진 경우
+- `while`: 반복의 조건이 있는 경우, 반복 횟수가 명시적이지 않은 경우
+
+---
+
+### for 문
+
+<div style="float:left; width: 40%; margin-right:30px">
+
+```python
+
+# 기본 문법
+for 변수 in 연속된데이터집합:
+  # 코드 블록
+
+```
+
+</div>
+
+변수는 연속된 데이터 집합의 각 요소가 들어갈 공간을 나타낸다.
+
+연속된 데이터 집합은 리스트, 튜플, 문자열 등이 포함될 수 있다.
+
+<br>
+
+> 변수가 데이터집합 안에 속해있다면, 아래 코드 블록을 실행하고, 변수는 데이터집합의 다음 요소로 넘어간다.
+
+---
+
+### for 문
+
+<div style="float:left; width: 50%; margin-right:30px">
+
+```python
+
+fruits = ["사과", "바나나", "오렌지"]
+
+for 변수 in fruits:
+  print(변수)
+
+
+```
+
+</div>
+
+fruits 배열의 첫 번째 요소인
+*사과*가 변수에 들어가고,
+코드 블록 실행.
+
+_사과_ 출력 후, *사과*의 다음 요소인 *바나나*가 변수에 들어간다.
+
+---
+
+### for 문
+
+<div style="float:left; width: 40%; margin-right:30px">
+
+```python
+
+array = [1, 2, 3, 4, 5, 6]
+
+for i in array:
+  print(i)
+
+```
+
+</div>
+
+array의 첫 번째 인덱스인 1이
+변수 i에 들어가고, 코드 블록 실행.
+
+1 출력 후, array의 두 번째 요소인 2가
+변수 i에 들어가고, 코드 블록 실행.
+
+<br>
+
+> <small>i는 index의 약자로 반복문 등에서 index를 나타낼 때 변수를 주로 i로 설정한다.</small>
+
+---
+
+### for 문
+
+<div style="float:left; width: 40%; margin-right:30px">
+
+```python
+
+start = 1
+end = 15
+
+for i in range(start, end):
+  print(i)
+
+```
+
+</div>
+
+`range(a, b)`: a부터 b-1까지 정수를 생성 (a, b는 정수)
+
+`range(1, 10)`와 `[1, 2, 3, 4 ... 8, 9]`가 같다고 해석해도 무방.
+
+<br>
+
+> 일반적으로 for문은 반복 횟수가 정해진 경우에 사용되기에 range() 함수를 사용하는 경우가 대부분이다.
 
 ---
