@@ -70,9 +70,20 @@ age = 16
 #     print(" " * (3 - i) + "*" * (2 * i - 1))
 # for i in range(2, 0, -1):
 #     print(" " * (3 - i) + "*" * (2 * i - 1))
-for i in range(20, 0, -1):
-    print(i)
+# for i in range(20, 0, -1):
+#     print(i)
 
 
 # for i in range(1,6):
 #     print("*"*i)
+
+
+
+numbers = [7, 12, 18, 21, 10, 25, 6, 24, 20, 2, 14, 5, 22, 13, 23, 8, 3, 16, 17, 19, 28, 11, 30, 9, 15, 27, 26, 29, 4, 1]
+
+for number in numbers:
+    if number % 2 == 0:
+        continue
+    if number >= 25:
+        break
+    print(number)
