@@ -219,3 +219,28 @@ else:
 **윤년 판별기**
 
 ---
+
+### 예제
+
+<div style="float:right; width: 70%; margin-left:30px">
+
+```python
+
+year = int(input("연도를 입력하세요: "))
+
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    print(f"{year}년 윤년 O")
+else:
+    print(f"{year}년 윤년 X")
+
+```
+
+</div>
+
+**윤년 판별기**
+
+연산의 결과가 True이면 코드 블록을 실행하는 것이기에
+
+이렇게 최적화 가능
+
+---
