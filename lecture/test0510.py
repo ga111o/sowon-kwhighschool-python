@@ -79,11 +79,35 @@ age = 16
 
 
 
-numbers = [7, 12, 18, 21, 10, 25, 6, 24, 20, 2, 14, 5, 22, 13, 23, 8, 3, 16, 17, 19, 28, 11, 30, 9, 15, 27, 26, 29, 4, 1]
+# numbers = [7, 12, 18, 21, 10, 25, 6, 24, 20, 2, 14, 5, 22, 13, 23, 8, 3, 16, 17, 19, 28, 11, 30, 9, 15, 27, 26, 29, 4, 1]
 
-for number in numbers:
-    if number % 2 == 0:
-        continue
-    if number >= 25:
+# for number in numbers:
+#     if number % 2 == 0:
+#         continue
+#     if number >= 25:
+#         break
+#     print(number)
+
+
+while(True):
+    num = int(input("숫자 입력: "))
+    is_prime = True
+
+    if num == 0:
         break
-    print(number)
+
+    elif num == 1:
+        print("소수 X")
+        continue
+    
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                is_prime = False
+    
+    if is_prime == True:
+        print("소수 O")
+    else:
+        print("소수 X")
+
+            
