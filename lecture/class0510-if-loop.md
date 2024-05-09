@@ -543,31 +543,93 @@ while True:
 
 ### 예제
 
-**리스트의 숫자 중 홀수만 출력**
+**입력 받은 숫자가 '소수'인지 확인**
 
-```python
-numbers = [7, 12, 18, 21, 9, 28, 11, 30, 19, 15, 27, 26, ... 29, 4, 10]
-```
+- 정수를 입력받고, 해당 숫자가 소수인지 판별하는 프로그램을 만들어라.
 
-- 정렬되지 않은 리스트(1부터 30까지 자연수)에서 홀수만을 출력하라.
-
-- 조건
-  - for문을 사용하되, range()함수는 사용하지 않는다.
-  - 25 이상의 수에서 반복문을 즉시 종료한다.
+- 조건: 사용자가 `0`을 입력하기 전까지 입출력을 반복해야 한다.
 
 ---
 
-### 예제
+**예제 - 입력 받은 숫자가 '소수'인지 확인**
 
-**리스트의 숫자 중 홀수만 출력**
+1. 반복문에 진입
+   1. 숫자 입력
+   2. 입력 숫자가 0이라면 ...
+   3. 입력 숫자가 1이라면 ...
+   4. 입력이 2 이상인 경우
+      1. 나누어 떨어진다면 소수 아님 체크
+   5. 체크 여부를 바탕으로 소수인지 출력
+
+---
 
 ```python
-numbers = [7, 12, 18, 21, 9, 28, 11, 30, 19, 15, 27, 26, ... 29, 4, 10]
+while(True):
+    num = int(input("숫자 입력: "))
+    is_prime = True
 
-for number in numbers:
-    if number % 2 == 0:
-        continue
-    if number >= 25:
+    if num == 0:
         break
-    print(number)
+    elif num == 1:
+        print("소수 X")
+        continue
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                is_prime = False
+
+    if is_prime == True:
+        print("소수 O")
+    else:
+        print("소수 X")
 ```
+
+---
+
+<div style="float:left; width: 40%; margin-right:30px">
+
+```python
+import math
+
+while True:
+    num = int(input("숫자 입력: "))
+    is_prime = True
+
+    if num == 0:
+        break
+    elif num == 1:
+        print("소수 X")
+        continue
+    elif num == 2:
+        print("소수 O")
+        continue
+    elif num % 2 == 0:
+        print("소수 X")
+        continue
+
+```
+
+</div>
+<div style="float:left; width: 55%;">
+
+```python
+
+    for i in range(3, int(math.sqrt(num)) + 1, 2):
+        if num % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print("소수 O")
+    else:
+        print("소수 X")
+
+```
+
+---
+
+### 파이썬 프로그래밍
+
+# 조건문과 반복문
+
+<img src="https://raw.githubusercontent.com/ga111o/sowon-kwhighschool-python/main/lecture/src/kwu-logo.png" style="width: 250px; position:absolute; bottom: 5%; right:5%">
