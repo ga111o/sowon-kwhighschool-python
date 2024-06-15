@@ -11,8 +11,122 @@ theme: gaia
 
 ---
 
-### Sets
+### set 정의
 
-수학에서 말하는 **집합**
+- **집합(Set)**: 수학에서 배운 집합의 성격을 따름
+- 여러 element들이 모여있으며, **순서가 없음**
+- 모든 element가 **달라야 함**
+- 이러한 집합을 파이썬에서 구현한 것이 **set**
 
-여러 원소들이 모여있는 집합
+---
+
+### set의 특성
+
+- set은 **mutable(변경 가능)** 함
+- function arguments로 사용할 수 있음
+
+---
+
+### set 예제
+
+```python
+# set 생성 예제
+
+my_set = {1, 2, 3, 4, 5}
+print(my_set)  # {1, 2, 3, 4, 5}
+
+# 중복된 요소는 자동으로 제거됨
+my_set = {1, 2, 2, 3, 4, 4, 5}
+print(my_set)  # {1, 2, 3, 4, 5}
+
+```
+
+---
+
+### set 예제
+
+```python
+
+fruits = set(["mango", "banana", "apple"])
+
+for element in fruits:
+  print(element)
+
+```
+
+---
+
+### set 예제
+
+```python
+
+num = set([1,2,3,4,5,6])
+odd = set([1,3,5,7,9,11])
+
+num.add(7)
+
+num.add(7)
+num.remove(3)
+num.clear()
+num.issubset(odd)
+
+```
+
+---
+
+### set의 mutability와 immutability
+
+- **Mutability (변경 가능성)**: 객체의 상태를 변경할 수 있는 속성
+- **Immutability (변경 불가능성)**: 객체의 상태를 변경할 수 없는 속성
+
+set은 Mutability와 Immutability를 모두 가지고 있다.
+
+```python
+
+subject_list = ["korean", "math"]
+
+subject = {subject_list, "eng"} # TypeError: unhashable type: 'list'
+subject[0] = "P.E." #TypeError: 'set' object does not support item assignment
+
+```
+
+---
+
+### 예제
+
+team_A와 team_B에 둘 다 속한 사람을 찾는 코드
+
+```python
+team_A = ["alice@example.com", "bob@example.com", "charlie@example.com"]
+team_B = ["bob@example.com", "david@example.com", "alice@example.com"]
+
+def checkDuplication(list1, list2):
+    # 코드 작성
+    return
+
+print(checkDuplication(list1, list2))
+# 출력: {'alice@example.com', 'bob@example.com'}
+```
+
+---
+
+### 예제
+
+team_A와 team_B에 둘 다 속한 사람을 찾는 코드
+
+```python
+team_A = ["alice@example.com", "bob@example.com", "charlie@example.com"]
+team_B = ["bob@example.com", "david@example.com", "alice@example.com"]
+
+def checkDuplication(list1, list2):
+    set1 = set(team1)
+    set2 = set(team2)
+    return set1 & set2
+
+print(checkDuplication(list1, list2))
+
+```
+
+---
+
+---
