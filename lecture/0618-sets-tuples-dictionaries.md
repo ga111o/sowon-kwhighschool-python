@@ -170,3 +170,85 @@ print(checkDuplication(list1, list2))
 - 파이썬에서 자주 사용하는 자료구조
 - 순서가 있고 mutable한 element를 중복 없이 저장
 - 키(key)와 값(value)의 쌍으로 데이터를 저장
+
+---
+
+### dictionary 특징
+
+<div style="float:left; width: 55%; margin-right:60px">
+
+- key값은 고유해야 하고, immutable하며, value는 mutalbe하다.
+- key값을 리스트에서의 인덱스라고 생각해도 무방
+
+</div>
+
+<div style="float:right; width:400px;">
+
+```python
+
+score = {
+  "철수": 70,
+  "영희": 90,
+  "민수": 80,
+}
+
+```
+
+---
+
+### dictionary 메서드
+
+```python
+
+print(dict.keys())   # key들을 반환
+print(dict.values()) # value들을 반환
+print(dict.items())  # key-value 튜플 형태로 반환
+print(dict.update({"민준": 95})) # 딕셔너리 업데이트
+print(dict.pop("민준")) # 해당 key-value 삭제
+print(dict.get("철수")) # 해당 key의 value 반환
+print(dict.clear())  # 딕셔너리 초기화
+
+```
+
+---
+
+### 예제
+
+학생의 이름과 성적이 저장된 딕셔너리에서
+최고 성적을 가진 학생의 이름과 성적을 출력
+
+```python
+
+students = {
+  "철수": 85,
+  "영희": 90,
+  "민수": 98,
+  "민지": 92
+}
+
+
+print(f"최고 성적 학생: { }, 성적: { }")
+
+```
+
+---
+
+### 예제
+
+```python
+
+students = {
+  "철수": 85,
+  "영희": 90,
+  "민수": 98,
+  "민지": 92
+}
+
+best_student = max(students, key=students.get)
+best_score = students[best_student]
+
+print(f"최고 성적 학생: {best_student}, 성적: {best_score}")
+
+```
+
+---
