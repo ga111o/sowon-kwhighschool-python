@@ -23,22 +23,14 @@ theme: gaia
 
 ---
 
-### set의 특성
-
-- set은 **mutable(변경 가능)** 함
-- function arguments로 사용할 수 있음
-
----
-
 ### set 예제
 
 ```python
-# set 생성 예제
 
 my_set = {1, 2, 3, 4, 5}
 print(my_set)  # {1, 2, 3, 4, 5}
 
-# 중복된 요소는 자동으로 제거됨
+# 중복된 요소는 자동으로 제거
 my_set = {1, 2, 2, 3, 4, 4, 5}
 print(my_set)  # {1, 2, 3, 4, 5}
 
@@ -72,6 +64,9 @@ num.add(7)
 num.remove(3)
 num.clear()
 num.issubset(odd)
+num.difference(odd)
+num.intersection(odd)
+num.union(odd)
 
 ```
 
@@ -155,6 +150,20 @@ print(checkDuplication(list1, list2))
 
 ---
 
+### tuple의 immutability
+
+```python
+
+class = ("korean", "math", "eng")
+class[0] = "P.E." # SyntaxError: invalid syntax
+
+classNgrade = (["korean", 80], ["math", 85])
+classNgrade[0][1] = 90
+
+```
+
+---
+
 ### Tuple과 리스트 비교
 
 | 특징        | Tuple              | 리스트                    |
@@ -186,7 +195,7 @@ print(checkDuplication(list1, list2))
 
 ```python
 
-score = {
+student = {
   "철수": 70,
   "영희": 90,
   "민수": 80,
