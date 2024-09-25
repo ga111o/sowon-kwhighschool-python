@@ -1,6 +1,8 @@
 from flask import Flask, render_template_string
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 
 def read_file(file_path):
@@ -19,9 +21,11 @@ def index():
 
     for i in range(total_lines):
         content.append(
-            f'<p>{i} - House Price: {house_lines[i].strip()} 억 원</p>')
+            f'<p>{i} - House Price: {house_lines[i].strip()} 억 원</p>'
+        )
         content.append(
-            f'<p>{i} - Income: {income_lines[i].strip()} 천만 원</p>')
+            f'<p>{i} - Income: {income_lines[i].strip()} 천만 원</p>'
+        )
         content.append('<hr/>')
 
     final_content = ''.join(content)
@@ -72,7 +76,8 @@ def show_data(num):
     for i in range(num):
         content.append(f'<p>{i} - House Price: {house_lines[i].strip()}</p>')
         content.append(
-            f'<p>{i} - Income: {income_lines[i].strip()}</p>')
+            f'<p>{i} - Income: {income_lines[i].strip()}</p>'
+        )
         content.append('<hr/>')
         if (i + 1) % 10 == 0:
             content.append('<p>!광고 글!</p>')
@@ -110,4 +115,4 @@ def show_data(num):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=3000, debug=True)
