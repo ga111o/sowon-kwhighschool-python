@@ -74,9 +74,10 @@ def show_data(num):
     content.append(f'<h2>{num} data</h2>')
 
     for i in range(num):
-        content.append(f'<p>{i} - House Price: {house_lines[i].strip()}</p>')
         content.append(
-            f'<p>{i} - Income: {income_lines[i].strip()}</p>'
+            f'<p>{i} - House Price: {house_lines[i].strip()} 억 원</p>')
+        content.append(
+            f'<p>{i} - Income: {income_lines[i].strip()} 천만 원</p>'
         )
         content.append('<hr/>')
         if (i + 1) % 10 == 0:
