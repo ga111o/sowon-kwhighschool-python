@@ -1,3 +1,8 @@
+
+# 오늘 목표 먼저 보이고.
+# http://3.39.197.185:8085/menu/11.22
+
+
 # pip install fastapi uvicorn
 
 from fastapi import FastAPI

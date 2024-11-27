@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+  </head>
+
+  <body>
+    <input id="dateInput" />
+    <button onclick="fetchMenu()">조회</button>
+    <pre id="menuOutput"></pre>
+  </body>
+
+  <script>
+    async function fetchMenu() {
+      const date = document.getElementById("dateInput").value;
+      const response = await fetch(`http://3.39.197.185:8085/menu/${date}`);
+      const data = await response.text();
+      document.getElementById("menuOutput").innerText = data;
+    }
+  </script>
+</html>
