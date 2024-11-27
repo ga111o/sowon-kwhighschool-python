@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+  </head>
+  <body>
+    <input id="messageInput" />
+    <button onclick="sendMessage()">send</button>
+    <p id="message"></p>
+  </body>
+  <!--
+    application: 타입으로, 모든 종류의 이진 데이터를 나타냅니다
+
+    json: 서브타입으로, 구체적인 데이터 형식을 나타냅니다
+    
+    다른 일반적인 MIME 타입의 예:
+    text/html: HTML 문서
+    text/plain: 일반 텍스트
+    image/jpeg: JPEG 이미지
+    image/png: PNG 이미지
+    application/pdf: PDF 문서
+  -->
+  <script>
+    async function sendMessage() {
+      const messageInput = document.getElementById("messageInput");
+      const message = messageInput.value;
+
+      await fetch("http://localhost:8000/message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // stringify << json 문자열로 변경
+          content: message,
+        }),
+      });
+    }
+  </script>
+</html>

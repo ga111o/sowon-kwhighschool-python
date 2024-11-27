@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+  </head>
+  <body>
+    <p
+      id="message"
+      style="display: flex; justify-content: center; align-items: center"
+    ></p>
+  </body>
+  <script>
+    async function getMessage() {
+      const response = await fetch("http://localhost:8000/add?num1=7&num2=10"); // youtube.com/results?search_query=코딩애플 이거 예시 들면서
+
+      const data = await response.text();
+
+      document.getElementById("message").textContent = data;
+    }
+
+    getMessage();
+  </script>
+</html>
