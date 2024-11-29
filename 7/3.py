@@ -58,3 +58,8 @@ top5 = similarities.argsort()[-5:][::-1]
 top5_restaurants = df.loc[top5, ['name', 'type', 'review']]
 
 print(top5_restaurants)
+
+# 좋아요. 여러분은 "바다가 보이는 디저트 카페"라는 인간만이 알아들을 수 있는 말을 컴퓨터가 알아들을 수 있도록 하고,
+# 이랑 비슷한 값들을 찾아내게 되었습니다.
+
+# 그럼 오늘 수업은 여기까지 할게요. 수고하셨습니다.
