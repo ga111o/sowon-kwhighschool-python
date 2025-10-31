@@ -1,3 +1,4 @@
 env
 ssh
 3/.env
+*.zip
